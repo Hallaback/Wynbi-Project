@@ -5,48 +5,28 @@
     <title>Wynbi-Project</title>
     <!-- Dependencies -->
     <script type="text/javascript" src="bower_components\angular\angular.js"></script>
+    <script type="text/javascript" src="bower_components\angular-ui-router\release\angular-ui-router.js"></script>
     <link rel="stylesheet" type="text/css" href="bower_components\bootstrap\dist\css\bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="assets/main.css">
-    <link rel="stylesheet" type="text/css" href="assets/images">
+    <link rel="stylesheet" type="text/css" href="assets\main.css">
     <!-- /Dependencies -->
 </head>
 
-<body ng-controller="main-ctrl">
-
-	<nav class="navbar navbar-default">
-	    <div class="container-fluid">
-	        <div class="navbar-header">
-	            <a class="navbar-brand" href="#">
-	                <img alt="Jobs" src="/assets/images/00106-3D-company-logos-design-free-logo-online-01.png" height="30" width="35">
-	            </a>
-	        </div>
-	    </div>
-	</nav>
-
-	<div class="container search-job">
-        <form role="search">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search jobs..." ng-model="searchJobs">
+<body ng-controller="home-ctrl">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="home">
+                    <img alt="Jobs" src="/assets/images/00106-3D-company-logos-design-free-logo-online-01.png" height="30" width="35">
+                </a>
             </div>
-        </form>
-	</div>
-
-	<div class="container" ng-repeat="job in jobs | filter:searchJobs">
-		<ul class="job-listing">
-		    <li ng-bind=""></li>
-		    <li ng-bind=""></li>
-		    <li ng-bind=""></li>
-		    <li ng-bind=""></li>
-		    <a href='http://www.glassdoor.com/index.htm'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
-		</ul>
-
-	</div>
+        </div>
+    </nav>
     
- 
-	<div class="page" ui-view></div>
-
+    <div ui-view></div>
 </body>
 <script type="text/javascript" src="app.js"></script>
 <script type="text/javascript" src="app-service.js"></script>
+<script type="text/javascript" src="home/home-ctrl.js"></script>
+<script type="text/javascript" src="job/job-ctrl.js"></script>
 
 </html>

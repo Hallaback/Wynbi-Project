@@ -1,6 +1,8 @@
-var app = angular.module("wynbi-project", []);
+var app = angular.module("wynbi-project", ['ui.router']);
 
-app.config(function($stateProvider, $urlProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
+
+	$urlRouterProvider.when('', '/');
 	$urlRouterProvider.otherwise("/404");
 
 	$stateProvider
@@ -10,18 +12,11 @@ app.config(function($stateProvider, $urlProvider) {
 		})
 		.state('home', {
 			url: "/",
-			templateUrl: "index.html"
+			templateUrl: "home/home.html"
 		})
 		.state('job', {
-			url: "/job/:id",
+			url: "/jobs/:id",
 			templateUrl: "job/job.html",
 			controller: "job-ctrl"
 		})
-})
-
-app.controller('main-ctrl', ['$scope', 'jobs', function($scope, jobs) {
-	jobs.getJobs().then(function(data) {
-		$scope.jobs = data.data.response;
-	});
-	console.log($scope.jobs);
-}]);
+});

@@ -1,11 +1,12 @@
 app.service('jobs', function($http) {
 
 	this.getJobs = function() {
-		return $http.jsonp('http://api.glassdoor.com/api/api.htm?v=1&format=json&t.p=120&t.k=fz6JLNDfgVs&action=employers&q=pharmaceuticals&userip=192.168.43.42&useragent=Mozilla/%2F4.0?callback=JSON_CALLBACK');
+		return $http.jsonp('https://api.springrole.com/authorize?scope=Basic&redirect_uri=http://localhost:8080/#/&response_type=token&client_id=4d14b235?callback=JSON_CALLBACK');
 	}
 
-	this.getOneJob = function() {
-		return $http.jsonp('http://api.glassdoor.com/api/api.htm?v=1&format=json&t.p=120&t.k=fz6JLNDfgVs&action=employers&q=pharmaceuticals&userip=192.168.43.42&useragent=Mozilla/%2F4.0?callback=JSON_CALLBACK');
+	this.getOneJob = function(id) {
+		return $http.jsonp('https://api.springrole.com/authorize?scope=Basic&redirect_uri=http://localhost:8080/#/&response_type=token&client_id=4d14b235?callback=JSON_CALLBACK' + id);
 	}
 
 });
+// curl -v -X GET "https://api.springrole.com/authorize?scope=Basic&redirect_uri=Wynbi-Project&response_type=token&client_id=4d14b235

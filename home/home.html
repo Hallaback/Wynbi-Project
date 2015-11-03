@@ -4,10 +4,9 @@
 </div>
 <div class="container" ng-repeat="job in jobs | filter:searchJobs">
     <ul class="job-listing">
-        <li ng-bind="">Company</li>
+        <li ng-bind="job">Company</li>
         <li ng-bind="">Job Title</li>
         <li ng-bind="">Description</li>
         <li ng-bind="">Salary</li>
-        <a href='http://www.glassdoor.com/index.htm'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
     </ul>
 </div>

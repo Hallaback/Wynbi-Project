@@ -1,12 +1,18 @@
-<div class="container input-group">
-    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-    <input type="text" class="form-control" placeholder="Search jobs..." ng-model="searchJobs">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="input-group search-group">
+            <input type="text" class="form-control" placeholder="Search for jobs...">
+            <span class="input-group-btn">
+        		<button class="btn btn-primary" type="button" ng-click="searchJobs(keywords)">Go!</button>
+      		</span>
+      	</div>
+    </div>
 </div>
-<div class="container" ng-repeat="job in jobs | filter:searchJobs">
-    <ul class="job-listing">
-        <li ng-bind="job">Company</li>
-        <li ng-bind="">Job Title</li>
-        <li ng-bind="">Description</li>
-        <li ng-bind="">Salary</li>
-    </ul>
-</div>
+    <div class="container" ng-repeat="job in jobs">
+        <ul class="job-listing">
+            <li ng-bind="job.organization_name">Company</li>
+            <li ng-bind="job.position_title">Job Title</li>
+            <li ng-bind="">Description</li>
+            <li ng-bind="">Salary</li>
+        </ul>
+    </div>

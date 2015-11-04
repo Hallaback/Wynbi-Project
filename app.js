@@ -2,7 +2,7 @@ var app = angular.module("wynbi-project", ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
-	$urlRouterProvider.when('', '/');
+	$urlRouterProvider.when('', '/', '#');
 	$urlRouterProvider.otherwise("/404");
 
 	$stateProvider

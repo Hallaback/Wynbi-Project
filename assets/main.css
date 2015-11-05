@@ -7,10 +7,13 @@ body {
 li	{
 	list-style: none;
 }
+
 .jumboTitle {
 	font-family: orange juice;
 }
+
 .home {
+	margin-top: 0px;
 	font-family: arial;
 }
 

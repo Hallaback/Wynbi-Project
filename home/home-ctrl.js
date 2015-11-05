@@ -1,6 +1,6 @@
 app.controller('home-ctrl', ['$scope', 'jobs', function($scope, jobs) {
-	jobs.getJobs().then(function(data) {
-		$scope.jobs = data.data;
+	jobs.getJobs().then(function(response) {
+		$scope.jobs = response.data;
 	});
 	console.log($scope.jobs);
 

@@ -1,7 +1,28 @@
 li	{
 	list-style: none;
 }
+.jumboTitle {
+	font-family: orange juice;
+}
+.home {
+	font-family: arial;
+}
 
 .search-group {
 	width: 30%;
+	margin-left: 35%;
+	margin-top: 10%;
+}
+
+.search-results {
+
+}
+
+.jumbotron {
+	text-align: center;
+	background-color: white;
+	background-image: url("http://carasepatas.com.br/wp-content/uploads/2015/06/img-site-contato.jpg");
+	background-repeat: no-repeat;
+	min-height: 300px;
+	background-position: 10% 300%;
 }

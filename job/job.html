@@ -1,7 +1,14 @@
-<div class="container">
-	<div class="row">
-		<div class="col-6-md">
-			<h4>Hello World!</h4>
-		</div>
-	</div>
+<div class="container" ng-repeat="job in jobs">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <ul class="job-listing">
+                <li ng-bind="job.organization_name">Company</li>
+                <li ng-bind="job.position_title">Job Title</li>
+                <li ng-bind="job.minimum | currency">Salary Range</li> - <span ng-bind="job.maximum | currency"></span>
+                <li ng-bind="job.start_date">Start Date</li>
+                <li ng-bind="job.locations">Available Locations</li>
+                <li ng-bind="job.url">View More Details</li>
+            </ul>
+        </div>
+    </div>
 </div>
